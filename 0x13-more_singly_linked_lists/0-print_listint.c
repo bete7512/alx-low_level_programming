@@ -4,8 +4,6 @@
  *print_listint - print linked list
  *@h:linked list pointer
  *Return:int
- *
- *
  */
 
 size_t print_listint(const listint_t *h)
