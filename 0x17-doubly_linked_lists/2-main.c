@@ -1,29 +1,26 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
+
 /**
+ * main - check the code
  *
- *
- *
- *
+ * Return: Always EXIT_SUCCESS.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+int main(void)
 {
-	dlistint_t *temp;
-	temp->n = n;
-	temp->next = NULL;
-	temp->prev = NULL;
-	if (*head == NULL)
-		*head = temp;
-	else
-	{
-		while (*head != NULL)
-		{
-			if (*head->next == NUll)
-			{
-				temp->prev = *head;
-				*head->next = temp;
-			}
-			*head = *head->next;
-		}
-	}
-	return (*head);
+    dlistint_t *head;
+
+    head = NULL;
+    add_dnodeint(&head, 0);
+    add_dnodeint(&head, 1);
+    add_dnodeint(&head, 2);
+    add_dnodeint(&head, 3);
+    add_dnodeint(&head, 4);
+    add_dnodeint(&head, 98);
+    add_dnodeint(&head, 402);
+    add_dnodeint(&head, 1024);
+    print_dlistint(head);
+    return (EXIT_SUCCESS);
 }
